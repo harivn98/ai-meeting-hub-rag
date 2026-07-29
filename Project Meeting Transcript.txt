@@ -1,0 +1,62 @@
+Project Meeting Transcript
+Date: 29 July 2026
+
+Participants:
+- Sarah (Project Manager)
+- John (Backend Developer)
+- Emily (Frontend Developer)
+- Michael (QA Engineer)
+- David (UX Designer)
+
+Sarah: Welcome everyone. Today we will review the progress of Sprint 12 and discuss the remaining work before the next release.
+
+John: The authentication service is complete and deployed to staging. The transaction history API is still slow when retrieving large amounts of data. I expect to finish the optimization in two days.
+
+Emily: The dashboard redesign has been completed. I have integrated the login page and profile page. The account summary page is waiting for the updated transaction API.
+
+David: User testing showed that most users liked the new dashboard. However, several users requested larger fonts and a more visible transfer button. I will prepare updated UI mockups by Thursday.
+
+Michael: We executed 120 automated tests. Three regression tests failed because of changes in the transaction API. We will rerun the tests after the backend update.
+
+Sarah: Are there any project risks?
+
+John: Database performance under heavy traffic is still a concern. We may need to introduce caching if optimization is not enough.
+
+Emily: Browser compatibility testing for Safari is still pending.
+
+Michael: I recommend performing a performance test before the release candidate.
+
+Sarah: Good idea. Let's add performance testing to this sprint. John will optimize the API. Emily will complete the account summary page after the API is ready. David will finish the UI mockups by Thursday. Michael will prepare the testing plan before Friday.
+
+--------------------------------------------
+Internal Notes (Confidential)
+--------------------------------------------
+
+Project Code Name: Phoenix-47
+
+Internal Reference ID: MH-2026-7845
+
+The staging server IP address is 10.25.14.87.
+
+The QA environment password is:
+BlueTiger#842
+
+The demo customer used during testing is:
+Acme Robotics Ltd.
+
+The pilot deployment is scheduled for
+18 August 2026 at 09:30 UTC.
+
+The emergency rollback procedure is documented in
+Section R-12 of the deployment handbook.
+
+The finance department approved a testing budget of
+€18,750.
+
+The preferred AI model for document summarization is
+llama3.2.
+
+The preferred embedding model is
+nomic-embed-text.
+
+Meeting concluded at 11:15 AM.

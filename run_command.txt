@@ -1,0 +1,43 @@
+cd C:\Users\vnhar\Downloads\projects\ai-meeting-hub
+
+
+
+docker compose up --build
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cd C:\Users\vnhar\Downloads\projects\ai-meeting-hub\apps\ai-service
+
+
+
+.\venv\Scripts\activate
+
+
+
+$env:DATABASE_URL="postgresql://meetinghub:meetinghub_dev_password@localhost:5432/meetinghub"
+
+
+
+
+uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload

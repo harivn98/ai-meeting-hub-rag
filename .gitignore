@@ -1,0 +1,10 @@
+venv/
+node_modules/
+dist/
+.next/
+*.env
+!.env.example
+__pycache__/
+*.pyc
+.DS_Store
+apps/api/uploads/

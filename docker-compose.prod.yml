@@ -1,0 +1,30 @@
+version: "3.9"
+
+# Production overlay. Use together with the base file:
+#   docker compose -f docker-compose.yml -f docker-compose.prod.yml up --build -d
+#
+# Differences from the dev compose file:
+# - api/web build from Dockerfile.prod (compiled/standalone, non-root, no bind mounts)
+# - no source bind-mounts (image contents are the source of truth)
+# - containers restart unless explicitly stopped
+
+services:
+  api:
+    build:
+      context: ./apps/api
+      dockerfile: Dockerfile.prod
+    volumes:
+      - api_uploads:/app/uploads
+    restart: always
+
+  web:
+    build:
+      context: ./apps/web
+      dockerfile: Dockerfile.prod
+      args:
+        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:4000}
+    volumes: []
+    restart: always
+
+volumes:
+  api_uploads:
